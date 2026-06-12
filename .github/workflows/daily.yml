@@ -1,0 +1,42 @@
+name: daily-job-radar
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # 07:30 Copenhagen time (CEST)
+  workflow_dispatch: {}      # manual trigger button in GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run radar
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+        run: python main.py
+
+      - name: Commit state + results
+        run: |
+          git config user.name "job-radar-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/radar.sqlite dashboard/results.json
+          git diff --cached --quiet || git commit -m "radar run $(date -u +%F)"
+          git push

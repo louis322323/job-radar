@@ -1,0 +1,176 @@
+# ─────────────────────────────────────────────────────────────
+# Pre-filter rules — translated from scoring-rules-compact.md
+# This layer is FREE (no LLM). It kills ~90% of listings.
+# A job survives if: no hard_exclude hit AND at least one include hit.
+# ─────────────────────────────────────────────────────────────
+
+# Sweet-spot terms (any language). One match = job goes to LLM scoring.
+include:
+  - borgerinddragelse
+  - samskabelse
+  - borgerdialog
+  - boligsocial
+  - helhedsplan
+  - lokalsamfund
+  - landdistrikt
+  - landsbyudvikling
+  - områdefornyelse
+  - bymidte
+  - medborgerskab
+  - civilsamfund
+  - frivillighed
+  - proceskonsulent
+  - antropolog
+  - etnograf
+  - kvalitativ
+  - byudvikling
+  - byplanlæg
+  # ─────────────────────────────────────────────────────────
+  # SPROG-LOGIK: kun DA + DE + EN søgeord, med vilje.
+  # En annonce skrevet på svensk/norsk/hollandsk/fransk/italiensk
+  # = arbejdssproget er det sprog = hårdt filter (scoring-rules).
+  # Ved IKKE at have de sprog i listen filtreres de automatisk fra.
+  # Engelsk-sprogede jobs i Oslo/Stockholm/Amsterdam/Bruxelles/Bolzano
+  # fanges af de engelske ord. Tysk-sprogede (DE/AT/CH/Bolzano) af de tyske.
+  # ─────────────────────────────────────────────────────────
+  # ── German (native) ──
+  - quartier          # stamme: -smanager, -smanagement, -sentwicklung, -sarbeit, -simpulse
+  - stadtteil         # stamme: -arbeit, -entwicklung, -zentrum
+  - stadterneuerung
+  - bürgerbeteiligung
+  - stadtentwicklung
+  - gemeinwesenarbeit
+  - sozialraum
+  - partizipation
+  - zivilgesellschaft
+  - dorfentwicklung
+  - sozialer zusammenhalt
+  # ── English (C1-C2) ──
+  - community engagement
+  - citizen participation
+  - public participation
+  - participatory
+  - co-creation
+  - co-design
+  - social housing
+  - urban develop
+  - urban regeneration
+  - urban planning
+  - community develop
+  - community organis
+  - neighbourhood
+  - neighborhood
+  - placemaking
+  - civil society
+  - migration
+  - integration officer
+  - integrationsindsats
+  - integrationsmedarbejder
+  - integrationskonsulent
+  - integrationsområd
+  - migrant integration
+  - refugee integration
+  - asyl
+  - refugee
+  - flygtning
+  - geflücht
+  - regularis
+  - social cohesion
+  - qualitative research
+  - ethnograph
+  - anthropolog
+  - stakeholder engagement
+  - facilitation
+  - inclusive cities
+  # ── Academic: TITLER kvalificerer IKKE (ellers passerer kemi-ph.d.'er).
+  #    Kilderne henter akademiske opslag; EMNE-ordene her afgør match. ──
+  - bystudier
+  - byforskning
+  - boligforskning
+  - migrationsforsk
+  - integrationsforsk
+  - mobilitetsforsk
+  - velfærdsforsk
+  - urban studies
+  - urban sociology
+  - urban anthropology
+  - migration studies
+  - integration polic
+  - human geography
+  - stadtsoziolog
+  - stadtforschung
+  - migrationsforschung
+  - integrationsforschung
+  - quartiersforschung
+  - raumforschung
+  - raumplanung
+  # ── Lous forskningsniche — encounter/diversitet/småby-migration ──
+  - encounter
+  - conviviality
+  - convivial
+  - superdivers
+  - lived diversity
+  - everyday multiculturalism
+  - rural migration
+  - small town
+  - small-town
+  - peripheral region
+  - shrinking cit
+  - street-level bureaucra
+
+# Hard excludes — job dies immediately, never scored.
+hard_exclude:
+  # Wrong professions that sneak into broad searches
+  - sygeplejerske
+  - pædagog til
+  - social- og sundheds
+  - sosu
+  - lærer til
+  - skolelærer
+  - fysioterapeut
+  - ergoterapeut
+  - softwareudvikler
+  - software engineer
+  - it-konsulent
+  - regnskab
+  - bogholder
+  - elektriker
+  - tømrer
+  # Excluded DK regions (scoring-rules: Nordjylland, Sønderjylland, Lolland-Falster)
+  - nordjylland
+  - hjørring
+  - frederikshavn
+  - sønderjylland
+  - sønderborg
+  - aabenraa
+  - tønder
+  - haderslev
+  - lolland
+  - falster
+  - nakskov
+  - nykøbing falster
+  # PhD types excluded + roller der kræver afsluttet ph.d.
+  - doktorandenstelle
+  - postdoc
+  - postdoctoral
+  - adjunkt
+  - assistant professor
+  - associate professor
+  - professorship
+  - tenure-track
+  - tenured
+  # Seniority — strict reading per scoring rules (these get -15 anyway;
+  # at entry level they rarely clear 70, so cut them before paying for scoring)
+  - "minimum 7 års erfaring"
+  - "mindst 7 års erfaring"
+  - "10 års erfaring"
+  - chefkonsulent
+  - afdelingsleder
+  - "head of"
+  - direktør
+
+# Soft signals passed to the LLM as context flags (not excludes)
+flags:
+  senior_signals: ["5 års erfaring", "erfaren", "senior", "minimum 5"]
+  temp_signals: ["vikariat", "barselsvikar", "tidsbegrænset", "midlertidig"]
+  language_risk: ["svenska som arbetsspråk", "norsk som arbeidsspråk", "nederlands vereist", "flydende svensk", "flytande svenska"]

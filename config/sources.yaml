@@ -1,0 +1,167 @@
+# ─────────────────────────────────────────────────────────────
+# JOB RADAR — sources
+#
+# Three adapter types:
+#   jobtech_api   : Swedish Platsbanken open API (no key, structured JSON)
+#   rss           : RSS/Atom feeds (Jobindex supports this — stable)
+#   html_list     : HTML pages with CSS selectors for job items
+#   page_watch    : small org pages — we just hash the text and alert
+#                   "page changed, check manually". Never breaks.
+#
+# Tip: run `python main.py --test-source <name>` to test one source.
+# ─────────────────────────────────────────────────────────────
+
+sources:
+
+  # ══════════ DENMARK — aggregators (replaces ~40 career pages) ══════════
+
+  - name: jobindex-borgerinddragelse
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=borgerinddragelse+OR+samskabelse+OR+borgerdialog"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  - name: jobindex-boligsocial
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=boligsocial+OR+helhedsplan+OR+%22almene+boliger%22"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  - name: jobindex-lokalsamfund
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=landdistrikt+OR+lokalsamfund+OR+bymidte+OR+omr%C3%A5defornyelse"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  - name: jobindex-antropolog
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=antropolog+OR+etnograf+OR+%22kvalitativ+analyse%22"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  - name: jobindex-proces-frivillighed
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=proceskonsulent+OR+frivillighedskonsulent+OR+civilsamfund"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  # ══════════ SWEDEN — open API, zero scraping risk ══════════
+
+  - name: platsbanken-stockholm
+    type: jobtech_api
+    url: "https://jobsearch.api.jobtechdev.se/search"
+    params:
+      q: "urban planning"  # bevidst smal: kun EN-sprogede Stockholm-roller er i scope, udbyttet er lavt
+      municipality: "AvNB_uwa_6n6"   # Stockholm
+      limit: 50
+    country: SE
+
+  # ══════════ NORWAY ══════════
+
+  - name: finn-oslo
+    type: html_list
+    url: "https://www.finn.no/job/fulltime/search.html?location=0.20061&q=urban%20development%20english"  # kun EN-sprogede Oslo-roller er i scope
+    selectors:
+      item: "article"
+      title: "h2"
+      link: "a"
+    country: "NO"
+
+  # ══════════ BRUSSELS / EU ══════════
+
+  - name: eurobrussels-social
+    type: html_list
+    url: "https://www.eurobrussels.com/jobs/employment_and_social_affairs"
+    selectors: {link_pattern: "job_display"}
+    country: BE
+
+  - name: eurobrussels-migration
+    type: html_list
+    url: "https://www.eurobrussels.com/jobs/justice_freedom_and_security"
+    selectors: {link_pattern: "job_display"}
+    country: BE
+
+  - name: eurobrussels-rights
+    type: html_list
+    url: "https://www.eurobrussels.com/jobs/human_rights_and_democracy"
+    selectors: {link_pattern: "job_display"}
+    country: BE
+
+  # ══════════ GERMANY / BERLIN ══════════
+
+  - name: arbeitsagentur-quartier
+    type: arbeitsagentur_api
+    params: {was: "Quartiersmanagement", size: 50}
+    country: DE
+
+  - name: arbeitsagentur-stadtteil
+    type: arbeitsagentur_api
+    params: {was: "Stadtteilarbeit Gemeinwesenarbeit", size: 50}
+    country: DE
+
+  # ══════════ NETHERLANDS (English-primary only — filtered downstream) ══════════
+
+  - name: academictransfer
+    type: rss
+    url: "https://www.academictransfer.com/en/jobs/feed/?q=urban+OR+migration+OR+participation+OR+anthropology"
+    country: NL
+
+  # ══════════ BOLZANO ══════════
+
+  - name: eurac
+    type: page_watch
+    url: "https://www.eurac.edu/en/job-opportunities"
+    country: IT
+
+  # ══════════ SMALL ORGS — only post on own sites, page_watch = unbreakable ══════════
+
+  - {name: urban-creators,    type: page_watch, url: "https://urbancreators.dk/en/job/", country: DK}
+  - {name: opland,            type: page_watch, url: "https://www.opland.eu/ledige-stillinger/", country: DK}
+  - {name: wedodemocracy,     type: page_watch, url: "https://www.wedodemocracy.dk/om/", country: DK}
+  - {name: nordregio,         type: page_watch, url: "https://nordregio.org/career/", country: DK}
+  - {name: nordic-safe-cities,type: page_watch, url: "https://nordicsafecities.org/careers/", country: DK}
+  - {name: gehl,              type: page_watch, url: "https://www.gehlpeople.com/careers/", country: DK}
+  - {name: copenhagenize,     type: page_watch, url: "https://www.copenhagenize.eu/join-us", country: DK}
+  - {name: cifs,              type: page_watch, url: "https://www.cifs.dk/info/jobs", country: DK}
+  - {name: thewhy,            type: page_watch, url: "https://www.thewhy.dk/info/jobs-internships", country: DK}
+  - {name: socialtansvar,     type: page_watch, url: "https://socialtansvar.dk/ledige-stillinger/", country: DK}
+  - {name: vive,              type: page_watch, url: "https://www.vive.dk/da/om-vive/ledige-stillinger/", country: DK}
+  - {name: realdania,         type: page_watch, url: "https://realdania.dk/om-os/ledige-stillinger", country: DK}
+  - {name: bl-jobportal,      type: page_watch, url: "https://bl.dk/jobportalen/?filter=5078", country: DK}
+  - {name: byplanlab,         type: page_watch, url: "https://byplanlab.dk/da/jobboers", country: DK}
+  - {name: moedrehjaelpen,    type: page_watch, url: "https://moedrehjaelpen.dk/om-os/job/", country: DK}
+  - {name: crossing-borders,  type: page_watch, url: "https://karrierevejviser.dk/companies/54244/jobs/crossing-borders/", country: DK}
+
+
+  # ══════════ ACADEMIC — research assistant + employed PhD ══════════
+  # Jobindex dækker danske universiteters opslag (KU, AU, SDU, RUC, AAU-CPH)
+  - name: jobindex-videnskabelig-assistent
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=%22videnskabelig+assistent%22+OR+forskningsassistent"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  - name: jobindex-phd
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=%22ph.d.-stipendium%22+OR+%22ph.d.-stilling%22+OR+erhvervsphd"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
+  # IMISCOE: DET centrale jobboard for migrationsforskning i Europa —
+  # rammer præcis migration/integration/encounter-niche, mest EN-sprogede opslag
+  - name: imiscoe-jobs
+    type: html_list
+    url: "https://www.imiscoe.org/news-and-blog/jobs-opportunities"
+    selectors:
+      item: ".items-row, .blog-item, article, .item"
+      title: "a"
+      link: "a"
+    country: EU
+
+  # Eurac Bolzano: Center for Migration & Societal Change + Institute for
+  # Regional Development = migration i små byer/landdistrikter. Allerede
+  # page_watch'et ovenfor (kilden 'eurac').
+
+# Spain note: InfoJobs/hacesfalta have no stable feeds and the language
+# barrier makes auto-scoring unreliable. Recommend: manual monthly check,
+# or add a page_watch on a saved hacesfalta search URL once you have one.
