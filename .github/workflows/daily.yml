@@ -37,6 +37,10 @@ jobs:
         run: |
           git config user.name "job-radar-bot"
           git config user.email "bot@users.noreply.github.com"
+          git config pull.rebase false
           git add data/radar.sqlite dashboard/results.json
           git diff --cached --quiet || git commit -m "radar run $(date -u +%F)"
-          git push
+          # Pull any changes pushed since checkout; on conflict in the
+          # regenerated data files, keep our fresh version. Then push.
+          git pull origin main --no-edit -X ours || true
+          git push origin main
