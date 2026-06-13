@@ -9,7 +9,7 @@ Louis' bedste fit+odds er IKKE klassisk byplanlægger (lokalplaner = hans hul), 
 
 ## Hårde filtre (ryger ud, scores ikke)
 - Sprog: DA/DE native, EN C1-C2 OK. EKSKLUDER roller med svensk/hollandsk/norsk som primært arbejdssprog.
-- EKSKLUDER alle arbejdsgivere i user-job-tracker-EXCLUDE.md.
+- (Ingen ekstern exclude-liste i denne pipeline. Bedøm KUN ud fra teksten nedenfor. Hvis en arbejdsgiver eller detalje ikke er nævnt i jobteksten, så ANTAG INGENTING og opfind ikke en udelukkelsesgrund.)
 - EKSKLUDER DK-områder: Nordjylland, Sønderjylland, Lolland-Falster.
 - PhD: kun ANSATTE (løn, kontrakt) — fx dansk ph.d., Erhvervs-PhD, EU Marie Curie, hollandsk universitets-ph.d. (engelsk-only). EKSKLUDER tysk Doktorandenstelle, svensk-primær, selvfinansieret, studie-indskrivnings-ph.d.
 

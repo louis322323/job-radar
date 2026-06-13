@@ -68,4 +68,3 @@ Netlify → Add new site → Import from Git → vælg repoet →
 - LinkedIn-kilder kan ikke scrapes (login-mur) — brug LinkedIn's egne jobagenter.
 - Snippets fra lister er korte; LLM'en scorer på det tilgængelige. Jobs tæt
   på grænsen (65-75) fortjener et manuelt klik.
-# job-radar
