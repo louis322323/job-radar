@@ -18,6 +18,8 @@
   --zone-c:#8C97A3;     /* uden signatur: < 70 / unscored */
   --zone-w:#4E7CA8;     /* teknisk-blå: page watch */
   --card:#F7F8F5;
+  --urgent:#B23A33;     /* frist < 7 dage */
+  --soon:#C8861A;       /* frist < 3 uger */
 }
 *{box-sizing:border-box;margin:0}
 body{background:var(--paper);color:var(--ink);
@@ -44,10 +46,16 @@ h1 small{font:500 13px "IBM Plex Mono",monospace;color:#5b6168;
   font:600 12px "IBM Plex Sans",sans-serif;cursor:pointer;border-radius:2px}
 .chip[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .chip:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--zone-w);outline-offset:2px}
+/* hidden-jobs bar */
+.hiddenbar{font:500 12px "IBM Plex Mono",monospace;color:#5b6168;
+  padding:0 0 6px;display:none;align-items:center;gap:10px}
+.hiddenbar button{font:inherit;color:var(--zone-w);background:none;border:none;
+  cursor:pointer;text-decoration:underline;padding:0}
 /* job cards: sagsliste with score spine */
 ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px}
 .job{display:grid;grid-template-columns:56px 1fr;background:var(--card);
   border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.job.past{opacity:.55}
 .spine{display:flex;align-items:center;justify-content:center;
   font:500 17px "IBM Plex Mono",monospace;border-right:1px solid var(--ink);color:#fff}
 .spine.a{background:var(--zone-a);color:var(--ink)}
@@ -55,11 +63,25 @@ ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px}
 .spine.w{background:var(--zone-w);font-size:20px}
 .spine.c{background:repeating-linear-gradient(45deg,#fff,#fff 3px,var(--zone-c) 3px,var(--zone-c) 6px);color:var(--ink)}
 .body{padding:12px 16px}
+.titlerow{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
 .job h2{font:600 16px/1.3 "IBM Plex Sans",sans-serif}
 .job h2 a{color:inherit;text-decoration:none}
 .job h2 a:hover{text-decoration:underline}
 .meta{font:500 12px "IBM Plex Mono",monospace;color:#5b6168;margin:3px 0 7px}
 .verdict{font-size:14px;color:#3a4047}
+/* deadline badge */
+.dl{display:inline-block;font:500 11px "IBM Plex Mono",monospace;
+  padding:2px 7px;border-radius:2px;border:1px solid var(--line);
+  background:#eef0ec;color:#3a4047;margin:0 0 7px;white-space:nowrap}
+.dl.dl-urgent{background:var(--urgent);color:#fff;border-color:var(--urgent)}
+.dl.dl-soon{background:var(--soon);color:#fff;border-color:var(--soon)}
+.dl.dl-past{background:#e7e7e7;color:#777;border-color:#d2d2d2}
+/* irrelevant checkbox */
+.dismiss{display:flex;align-items:center;gap:6px;flex:none;
+  font:500 11px "IBM Plex Mono",monospace;color:#8a9099;cursor:pointer;
+  user-select:none;padding-top:2px}
+.dismiss input{cursor:pointer;accent-color:var(--zone-w)}
+.dismiss:hover{color:var(--urgent)}
 .empty{padding:48px 0;text-align:center;color:#5b6168}
 @media (max-width:520px){.job{grid-template-columns:44px 1fr}}
 @media (prefers-reduced-motion:no-preference){
@@ -94,12 +116,31 @@ ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px}
   <button class="chip" id="showAll" aria-pressed="false">Vis også &lt; 70</button>
 </div>
 
+<div class="hiddenbar" id="hiddenbar">
+  <span id="hiddencount"></span>
+  <button id="restore" type="button">Vis skjulte igen</button>
+</div>
+
 <ul id="list"></ul>
 <p class="empty" id="empty" hidden>Ingen jobs matcher. Radaren kører igen i morgen kl. 07:30.</p>
 </div>
 
 <script>
 let DATA={jobs:[]},country="",showAll=false;
+
+/* ── dismissed ("irrelevant") jobs — persisted in the browser ────────────── */
+const DISMISS_KEY="jobradar_dismissed_v1";
+function loadDismissed(){
+  try{return new Set(JSON.parse(localStorage.getItem(DISMISS_KEY)||"[]"));}
+  catch(e){return new Set();}
+}
+function saveDismissed(s){
+  try{localStorage.setItem(DISMISS_KEY,JSON.stringify([...s]));}catch(e){}
+}
+let dismissed=loadDismissed();
+function jobKey(j){return j.url||j.title||"";}
+function dismiss(j){dismissed.add(jobKey(j));saveDismissed(dismissed);render();}
+function restoreAll(){dismissed.clear();saveDismissed(dismissed);render();}
 
 function band(j){
   if(j.page_watch)return"w";
@@ -108,35 +149,89 @@ function band(j){
   if(j.score>=70)return"b";
   return"c";
 }
+
+/* parse a deadline (ISO or DD.MM.YYYY) into a label + urgency class */
+function deadlineInfo(raw){
+  if(!raw)return null;
+  let d=null;const s=String(raw);
+  let m=s.match(/(\d{4})-(\d{1,2})-(\d{1,2})/);
+  if(m)d=new Date(+m[1],+m[2]-1,+m[3]);
+  else{m=s.match(/(\d{1,2})[.\/](\d{1,2})[.\/](\d{4})/);if(m)d=new Date(+m[3],+m[2]-1,+m[1]);}
+  if(!d||isNaN(d.getTime()))return{label:"frist "+s,cls:""};
+  const today=new Date();today.setHours(0,0,0,0);
+  const days=Math.round((d-today)/864e5);
+  const fmt=d.getDate()+"/"+(d.getMonth()+1);
+  if(days<0)  return{label:"frist udløbet "+fmt,cls:"dl-past",past:true};
+  if(days===0)return{label:"frist i dag · "+fmt,cls:"dl-urgent"};
+  if(days<=7) return{label:"frist om "+days+" d · "+fmt,cls:"dl-urgent"};
+  if(days<=21)return{label:"frist "+fmt,cls:"dl-soon"};
+  return{label:"frist "+fmt,cls:""};
+}
+
 function render(){
   const q=document.getElementById("q").value.toLowerCase();
   const list=document.getElementById("list");list.textContent="";
   const min=DATA.min_score??70;
+
+  let hiddenShown=0;
   const rows=DATA.jobs.filter(j=>{
+    if(dismissed.has(jobKey(j))){hiddenShown++;return false;}
     if(!showAll && !j.page_watch && j.score!=null && j.score<min)return false;
     if(country && j.country!==country)return false;
     if(q && !`${j.title} ${j.org} ${j.verdict}`.toLowerCase().includes(q))return false;
     return true;
   }).sort((x,y)=>(y.score??-1)-(x.score??-1));
+
+  /* hidden-jobs bar */
+  const bar=document.getElementById("hiddenbar");
+  if(dismissed.size>0){
+    bar.style.display="flex";
+    document.getElementById("hiddencount").textContent=
+      dismissed.size+" job"+(dismissed.size>1?"s":"")+" markeret irrelevant";
+  }else{bar.style.display="none";}
+
   document.getElementById("empty").hidden=rows.length>0;
   for(const j of rows){
     const li=document.createElement("li");li.className="job";
     const b=band(j);
+    const dl=deadlineInfo(j.deadline);
+    if(dl&&dl.past)li.classList.add("past");
+
     const spine=document.createElement("div");
     spine.className="spine "+b;
     spine.textContent=j.page_watch?"⚐":(j.score??"–");
+
     const body=document.createElement("div");body.className="body";
+
+    const titlerow=document.createElement("div");titlerow.className="titlerow";
     const h2=document.createElement("h2");
     const a=document.createElement("a");a.href=j.url;a.target="_blank";a.rel="noopener";
     a.textContent=j.title||"(uden titel)";h2.append(a);
+
+    const dismissLbl=document.createElement("label");dismissLbl.className="dismiss";
+    dismissLbl.title="Skjul dette job permanent";
+    const cb=document.createElement("input");cb.type="checkbox";
+    cb.addEventListener("change",()=>dismiss(j));
+    dismissLbl.append(cb,document.createTextNode("irrelevant"));
+    titlerow.append(h2,dismissLbl);
+
     const meta=document.createElement("p");meta.className="meta";
-    meta.textContent=[j.org,j.country,j.deadline?("frist "+j.deadline):null,
-      j.source].filter(Boolean).join(" · ");
+    meta.textContent=[j.org,j.country,j.source].filter(Boolean).join(" · ");
+
+    body.append(titlerow,meta);
+    if(dl){
+      const badge=document.createElement("span");
+      badge.className="dl "+dl.cls;badge.textContent=dl.label;
+      body.append(badge);
+    }
     const v=document.createElement("p");v.className="verdict";
     v.textContent=j.verdict||"";
-    body.append(h2,meta,v);li.append(spine,body);list.append(li);
+    body.append(v);
+
+    li.append(spine,body);list.append(li);
   }
 }
+
 document.getElementById("q").addEventListener("input",render);
 document.querySelectorAll(".chip[data-c]").forEach(c=>c.addEventListener("click",()=>{
   country=c.dataset.c;
@@ -146,6 +241,8 @@ document.querySelectorAll(".chip[data-c]").forEach(c=>c.addEventListener("click"
 document.getElementById("showAll").addEventListener("click",e=>{
   showAll=!showAll;e.target.setAttribute("aria-pressed",showAll);render();
 });
+document.getElementById("restore").addEventListener("click",restoreAll);
+
 fetch("results.json").then(r=>r.json()).then(d=>{
   DATA=d;
   document.getElementById("generated").textContent=

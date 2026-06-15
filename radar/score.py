@@ -14,6 +14,8 @@ import os
 
 import requests
 
+from radar.fetch import extract_deadline, _first_date
+
 log = logging.getLogger("radar.score")
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
 TIMEOUT = 60
@@ -45,7 +47,8 @@ def _job_text(job):
 def _enrich(job):
     """If the listing snippet is thin, fetch the job page and pull more text
     so the model scores on real content instead of just a title. Best-effort:
-    any failure leaves the original snippet untouched."""
+    any failure leaves the original snippet untouched. Also tries to read a
+    deadline off the fuller page text if we don't already have one."""
     snippet = job.get("snippet") or ""
     if len(snippet) >= 400 or job.get("page_watch") or not job.get("url"):
         return job
@@ -57,9 +60,28 @@ def _enrich(job):
         text = BeautifulSoup(r.text, "html.parser").get_text(" ", strip=True)
         if len(text) > len(snippet):
             job["snippet"] = text[:3000]
+        if not job.get("deadline"):
+            found = extract_deadline(text[:6000])
+            if found:
+                job["deadline"] = found
     except Exception as e:  # noqa: BLE001
         log.debug("enrich failed for %s: %s", job.get("url"), e)
     return job
+
+
+def _norm_deadline(value, job):
+    """Normalise a deadline to ISO YYYY-MM-DD. Order of trust:
+    1. a real date in the LLM's reply, 2. a deadline already found at fetch time,
+    3. a date scraped from the snippet. Garbage ('null', 'ikke oplyst') -> None."""
+    if value:
+        s = str(value).strip().lower()
+        if s not in ("null", "none", "ikke oplyst", "ikke angivet", "n/a", "-", ""):
+            iso = _first_date(s)
+            if iso:
+                return iso
+    if job.get("deadline"):
+        return job["deadline"]
+    return extract_deadline(job.get("snippet", ""))
 
 
 def _parse(raw):
@@ -99,7 +121,7 @@ def score_job(job):
         raw = fn(_rules() + "\n\n" + INSTRUCTION, _job_text(job))
         data = _parse(raw)
         job.update(score=int(data["score"]), verdict=data.get("verdict", ""),
-                   deadline=data.get("deadline"))
+                   deadline=_norm_deadline(data.get("deadline"), job))
     except Exception as e:  # noqa: BLE001
         log.error("scoring failed for %s: %s", job.get("title"), e)
         return _unscored(job)
