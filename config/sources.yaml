@@ -45,6 +45,12 @@ sources:
     selectors: {link_pattern: "/vis-job/"}
     country: DK
 
+  - name: jobindex-kvarter-medborger
+    type: html_list
+    url: "https://www.jobindex.dk/jobsoegning?q=kvarterhus+OR+medborgerhus+OR+beboerhus+OR+%22boligsocial+helhedsplan%22+OR+kvartersudvikling"
+    selectors: {link_pattern: "/vis-job/"}
+    country: DK
+
   # ══════════ SWEDEN — open API, zero scraping risk ══════════
 
   - name: platsbanken-stockholm
@@ -113,24 +119,26 @@ sources:
     url: "https://www.eurac.edu/en/job-opportunities"
     country: IT
 
-  # ══════════ SMALL ORGS — only post on own sites, page_watch = unbreakable ══════════
-
-  - {name: urban-creators,    type: page_watch, url: "https://urbancreators.dk/en/job/", country: DK}
-  - {name: opland,            type: page_watch, url: "https://www.opland.eu/ledige-stillinger/", country: DK}
-  - {name: wedodemocracy,     type: page_watch, url: "https://www.wedodemocracy.dk/om/", country: DK}
-  - {name: nordregio,         type: page_watch, url: "https://nordregio.org/career/", country: DK}
-  - {name: nordic-safe-cities,type: page_watch, url: "https://nordicsafecities.org/careers/", country: DK}
-  - {name: gehl,              type: page_watch, url: "https://www.gehlpeople.com/careers/", country: DK}
-  - {name: copenhagenize,     type: page_watch, url: "https://www.copenhagenize.eu/join-us", country: DK}
-  - {name: cifs,              type: page_watch, url: "https://www.cifs.dk/info/jobs", country: DK}
-  - {name: thewhy,            type: page_watch, url: "https://www.thewhy.dk/info/jobs-internships", country: DK}
-  - {name: socialtansvar,     type: page_watch, url: "https://socialtansvar.dk/ledige-stillinger/", country: DK}
-  - {name: vive,              type: page_watch, url: "https://www.vive.dk/da/om-vive/ledige-stillinger/", country: DK}
-  - {name: realdania,         type: page_watch, url: "https://realdania.dk/om-os/ledige-stillinger", country: DK}
-  - {name: bl-jobportal,      type: page_watch, url: "https://bl.dk/jobportalen/?filter=5078", country: DK}
-  - {name: byplanlab,         type: page_watch, url: "https://byplanlab.dk/da/jobboers", country: DK}
-  - {name: moedrehjaelpen,    type: page_watch, url: "https://moedrehjaelpen.dk/om-os/job/", country: DK}
-  - {name: crossing-borders,  type: page_watch, url: "https://karrierevejviser.dk/companies/54244/jobs/crossing-borders/", country: DK}
+  # ══════════ DK niche orgs & job boards — now scraped for real postings ══════════
+  # Was page_watch ("side ændret"-støj). Now dk_careers: pulls the actual
+  # vacancy links and scores them. Server-rendered pages yield jobs; a few
+  # JS-only sites stay silent (no false "side ændret" cards either way).
+  - {name: urban-creators,    type: dk_careers, org: "Urban Creators",        url: "https://urbancreators.dk/en/job/", country: DK}
+  - {name: opland,            type: dk_careers, org: "Opland",                url: "https://www.opland.eu/ledige-stillinger/", country: DK}
+  - {name: wedodemocracy,     type: dk_careers, org: "We Do Democracy",       url: "https://www.wedodemocracy.dk/om/", country: DK}
+  - {name: nordregio,         type: dk_careers, org: "Nordregio",             url: "https://nordregio.org/career/", country: DK}
+  - {name: nordic-safe-cities,type: dk_careers, org: "Nordic Safe Cities",    url: "https://nordicsafecities.org/careers/", country: DK}
+  - {name: gehl,              type: dk_careers, org: "Gehl",                  url: "https://www.gehlpeople.com/careers/", country: DK}
+  - {name: copenhagenize,     type: dk_careers, org: "Copenhagenize",         url: "https://www.copenhagenize.eu/join-us", country: DK}
+  - {name: cifs,              type: dk_careers, org: "Inst. for Fremtidsforskning", url: "https://www.cifs.dk/info/jobs", country: DK}
+  - {name: thewhy,            type: dk_careers, org: "The Why",               url: "https://www.thewhy.dk/info/jobs-internships", country: DK}
+  - {name: socialtansvar,     type: dk_careers, org: "Socialt Ansvar",        url: "https://socialtansvar.dk/ledige-stillinger/", country: DK}
+  - {name: vive,              type: dk_careers, org: "VIVE",                  url: "https://www.vive.dk/da/om-vive/ledige-stillinger/", country: DK}
+  - {name: realdania,         type: dk_careers, org: "Realdania",             url: "https://realdania.dk/om-os/ledige-stillinger", country: DK}
+  - {name: bl-jobportal,      type: dk_careers, org: "BL Jobportal",          url: "https://bl.dk/jobportalen/?filter=5078", country: DK}
+  - {name: byplanlab,         type: dk_careers, org: "Dansk Byplanlab",       url: "https://byplanlab.dk/da/jobboers", country: DK}
+  - {name: moedrehjaelpen,    type: dk_careers, org: "Mødrehjælpen",          url: "https://moedrehjaelpen.dk/om-os/job/", country: DK}
+  - {name: crossing-borders,  type: dk_careers, org: "Crossing Borders",      url: "https://karrierevejviser.dk/companies/54244/jobs/crossing-borders/", country: DK}
 
 
   # ══════════ ACADEMIC — research assistant + employed PhD ══════════
@@ -163,47 +171,61 @@ sources:
   # page_watch'et ovenfor (kilden 'eurac').
 
 
-  # ══════════ DK career pages (page_watch — robust, 'side ændret' alert) ══════════
-  - {name: dk-3xn, type: page_watch, url: "https://3xn.com/career", country: DK}
-  - {name: dk-implementconsultinggroup, type: page_watch, url: "https://implementconsultinggroup.com/join-us/jobs?location=Hellerup", country: DK}
-  - {name: dk-oxfam-dk, type: page_watch, url: "https://oxfam-dk.career.emply.com/da/ledige-stillinger", country: DK}
-  - {name: dk-hrm-cancer, type: page_watch, url: "https://candidate.hr-manager.net/vacancies/list.aspx?customer=Cancer", country: DK}
-  - {name: dk-lejre, type: page_watch, url: "https://www.lejre.dk/ledige-job", country: DK}
-  - {name: dk-dgi, type: page_watch, url: "https://www.dgi.dk/om-dgi/job-i-dgi", country: DK}
-  - {name: dk-portal, type: page_watch, url: "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobList.aspx?ClientId=1493", country: DK}
-  - {name: dk-alleroed, type: page_watch, url: "https://alleroed.career.emply.com/ledige-stillinger", country: DK}
-  - {name: dk-furesoe, type: page_watch, url: "https://furesoe.career.emply.com/ledige-stillinger", country: DK}
-  - {name: dk-arkitektforeningen, type: page_watch, url: "https://arkitektforeningen.dk/jobbors/", country: DK}
-  - {name: dk-koege, type: page_watch, url: "https://www.koege.dk/om-koege-kommune/job-hos-os/ledige-stillinger", country: DK}
-  - {name: dk-stevns, type: page_watch, url: "https://stevns.career.emply.com/", country: DK}
-  - {name: dk-rudersdal, type: page_watch, url: "https://rudersdal.dk/om-kommunen/job-i-kommunen/ledige-job", country: DK}
-  - {name: dk-ltk, type: page_watch, url: "https://www.ltk.dk/lyngby-taarbaek-kommune-som-arbejdsplads/ltk-som-arbejdsplads/ledige-stillinger", country: DK}
-  - {name: dk-gentofte, type: page_watch, url: "https://gentofte.dk/job/ledige-stillinger-i-gentofte-kommune/", country: DK}
-  - {name: dk-ishoj, type: page_watch, url: "https://ishoj.dk/om/ishoj-kommune-som-arbejdsplads/ledige-stillinger/", country: DK}
-  - {name: dk-brondby, type: page_watch, url: "https://brondby.career.emply.com/job-i-kommunen", country: DK}
-  - {name: dk-rk, type: page_watch, url: "https://www.rk.dk/job/ledige-job", country: DK}
-  - {name: dk-dragoer, type: page_watch, url: "https://www.dragoer.dk/om-kommunen/job-i-dragoer-kommune/soeg-job", country: DK}
-  - {name: dk-albertslund, type: page_watch, url: "https://albertslund.dk/job/job-i-albertslund/ledige-stillinger", country: DK}
-  - {name: dk-herlev, type: page_watch, url: "https://herlev.career.emply.com/da/ledige-stillinger", country: DK}
-  - {name: dk-taarnby, type: page_watch, url: "https://www.taarnby.dk/om-kommunen/job/ledige-stillinger/", country: DK}
-  - {name: dk-vallensbaek, type: page_watch, url: "https://www.vallensbaek.dk/om-kommunen/job-og-uddannelse-i-kommunen/ledige-stillinger", country: DK}
-  - {name: dk-cfmoller, type: page_watch, url: "https://www.cfmoller.com/j/Job", country: DK}
-  - {name: dk-greencapacity, type: page_watch, url: "https://www.greencapacity.eu/en/", country: DK}
-  - {name: dk-holbaek, type: page_watch, url: "https://holbaek.dk/om-kommunen/job-i-kommunen/ledige-stillinger", country: DK}
-  - {name: dk-kunstakademiet, type: page_watch, url: "https://kunstakademiet.dk/en/om-kunstakademiet/ledige-stillinger", country: DK}
-  - {name: dk-hrm-ruc, type: page_watch, url: "https://candidate.hr-manager.net/vacancies/list.aspx?customer=ruc", country: DK}
-  - {name: dk-ringsted, type: page_watch, url: "https://ringsted.varbi.com/", country: DK}
-  - {name: dk-khr, type: page_watch, url: "https://khr.recruitio.dk/job-openings/", country: DK}
-  - {name: dk-pluskontoret, type: page_watch, url: "https://www.pluskontoret.dk/kontakt#Job", country: DK}
-  - {name: dk-ramboll, type: page_watch, url: "https://www.ramboll.com/careers?workplace=copenhagen&free-text=planning", country: DK}
-  - {name: dk-arkitema, type: page_watch, url: "https://www.arkitema.com/dk/karriere", country: DK}
-  - {name: dk-henninglarsen, type: page_watch, url: "https://henninglarsen.com/careers", country: DK}
-  - {name: dk-sla, type: page_watch, url: "https://www.sla.dk/career/", country: DK}
-  - {name: dk-skala, type: page_watch, url: "https://skala.dk/kontakt/job", country: DK}
-  - {name: dk-lytt, type: page_watch, url: "https://www.lytt.dk/job", country: DK}
-  - {name: dk-urbanpower, type: page_watch, url: "https://urbanpower.dk/info/", country: DK}
-  - {name: dk-roskilde, type: page_watch, url: "https://www.roskilde.dk/da-dk/om-kommunen/job-i-roskilde/ledige-stillinger/", country: DK}
-  - {name: dk-job, type: page_watch, url: "https://job.frederiksberg.dk/job-i-kommunen", country: DK}
+  # ══════════ DK career pages — direct postings, scored like every other country ══════════
+  # Was a wall of page_watch "Side ændret" cards that could not be scored.
+  # Now grouped by ATS platform and scraped for individual vacancies.
+  #
+  # Individual kommune overview pages (Lejre, Køge, Rudersdal, LTK, Gentofte,
+  # Ishøj, Rødovre, Dragør, Albertslund, Tårnby, Vallensbæk, Holbæk, Roskilde,
+  # Frederiksberg) were REMOVED on purpose: every one of those vacancies is
+  # already indexed by the Jobindex aggregators above, so scraping them too
+  # would only create duplicate cards. Jobindex is the workhorse for DK.
+
+  # ── Emply (server-rendered HTML, scrapeable). Verify a tenant the first time
+  #    it has a live vacancy:  python main.py --test-source dk-oxfam-dk ──
+  - {name: dk-oxfam-dk,  type: dk_careers, org: "Oxfam Danmark",     url: "https://oxfam-dk.career.emply.com/da/ledige-stillinger", country: DK}
+  - {name: dk-alleroed,  type: dk_careers, org: "Allerød Kommune",   url: "https://alleroed.career.emply.com/ledige-stillinger", country: DK}
+  - {name: dk-furesoe,   type: dk_careers, org: "Furesø Kommune",    url: "https://furesoe.career.emply.com/ledige-stillinger", country: DK}
+  - {name: dk-stevns,    type: dk_careers, org: "Stevns Kommune",    url: "https://stevns.career.emply.com/", country: DK}
+  - {name: dk-brondby,   type: dk_careers, org: "Brøndby Kommune",   url: "https://brondby.career.emply.com/job-i-kommunen", country: DK}
+  - {name: dk-herlev,    type: dk_careers, org: "Herlev Kommune",    url: "https://herlev.career.emply.com/da/ledige-stillinger", country: DK}
+
+  # ── Varbi (clean /job/ links, prints deadline inline — confirmed working) ──
+  - name: dk-ringsted
+    type: html_list
+    org: "Ringsted Kommune"
+    url: "https://ringsted.varbi.com/job-vacancies"
+    selectors: {link_pattern: "/job/"}
+    country: DK
+
+  # ── HR-Manager (Talent Recruiter). May rate-limit automated fetchers; if a
+  #    run logs 0 here, leave it — Jobindex covers Kræftens Bekæmpelse & RUC. ──
+  - {name: dk-hrm-cancer, type: dk_careers, org: "Kræftens Bekæmpelse", url: "https://candidate.hr-manager.net/vacancies/list.aspx?customer=Cancer", country: DK}
+  - {name: dk-hrm-ruc,    type: dk_careers, org: "RUC",                 url: "https://candidate.hr-manager.net/vacancies/list.aspx?customer=ruc", country: DK}
+
+  # ── Recruitio / Signatur / job boards ──
+  - {name: dk-khr,             type: dk_careers, org: "KHR Architecture",  url: "https://khr.recruitio.dk/job-openings/", country: DK}
+  - {name: dk-portal-signatur, type: dk_careers, org: "Signatur portal",   url: "https://portal.signatur.dk/ExtJobs/DefaultHosting/JobList.aspx?ClientId=1493", country: DK}
+  - {name: dk-arkitektforeningen, type: dk_careers, org: "Arkitektforeningen jobbørs", url: "https://arkitektforeningen.dk/jobbors/", country: DK}
+
+  # ── Architecture / consultancy firms. Several are JavaScript SPAs and will
+  #    return 0 with a requests-only fetch — that is fine (silent, not noise).
+  #    For the few firms you care most about, a Jobindex company search is the
+  #    reliable backup. ──
+  - {name: dk-3xn,            type: dk_careers, org: "3XN",            url: "https://3xn.com/career", country: DK}
+  - {name: dk-cfmoller,       type: dk_careers, org: "C.F. Møller",    url: "https://www.cfmoller.com/j/Job", country: DK}
+  - {name: dk-ramboll,        type: dk_careers, org: "Rambøll",        url: "https://www.ramboll.com/careers?workplace=copenhagen&free-text=planning", country: DK}
+  - {name: dk-arkitema,       type: dk_careers, org: "Arkitema",       url: "https://www.arkitema.com/dk/karriere", country: DK}
+  - {name: dk-henninglarsen,  type: dk_careers, org: "Henning Larsen", url: "https://henninglarsen.com/careers", country: DK}
+  - {name: dk-sla,            type: dk_careers, org: "SLA",            url: "https://www.sla.dk/career/", country: DK}
+  - {name: dk-skala,          type: dk_careers, org: "Skala",          url: "https://skala.dk/kontakt/job", country: DK}
+  - {name: dk-lytt,           type: dk_careers, org: "LYTT",           url: "https://www.lytt.dk/job", country: DK}
+  - {name: dk-urbanpower,     type: dk_careers, org: "Urban Power",    url: "https://urbanpower.dk/info/", country: DK}
+  - {name: dk-implement,      type: dk_careers, org: "Implement",      url: "https://implementconsultinggroup.com/join-us/jobs?location=Hellerup", country: DK}
+  - {name: dk-greencapacity,  type: dk_careers, org: "Green Capacity", url: "https://www.greencapacity.eu/en/", country: DK}
+  - {name: dk-kunstakademiet, type: dk_careers, org: "Kunstakademiet", url: "https://kunstakademiet.dk/en/om-kunstakademiet/ledige-stillinger", country: DK}
+  - {name: dk-pluskontoret,   type: dk_careers, org: "Pluskontoret",   url: "https://www.pluskontoret.dk/kontakt#Job", country: DK}
+  - {name: dk-dgi,            type: dk_careers, org: "DGI",            url: "https://www.dgi.dk/om-dgi/job-i-dgi", country: DK}
 
 # Spain note: InfoJobs/hacesfalta have no stable feeds and the language
 # barrier makes auto-scoring unreliable. Recommend: manual monthly check,
