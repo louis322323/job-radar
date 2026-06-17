@@ -1,7 +1,22 @@
 {
- "generated": "2026-06-16 10:25",
+ "generated": "2026-06-17 10:14",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "arbeitsagentur-stadtteil",
+   "country": "DE",
+   "title": "Koordinator*in für Gemeinwesenarbeit (m/w/d)",
+   "org": "ZAUG GmbH Gemeinnützige Berufsbildungs-GmbH",
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003240325-S",
+   "snippet": "Sozialarbeiter/in / Sozialpädagoge/-pädagogin Gießen, Lahn",
+   "deadline": null,
+   "flags": [],
+   "matched": [
+    "gemeinwesenarbeit"
+   ],
+   "score": 75,
+   "verdict": "Stærkt match: Quartiersmanagement/Gemeinwesenarbeit er core borgerinddragelse og lokalsamfundsudvikling, som matcher Louis' kerneerfaring fra Konradi, Nordregio og speciale, og sprog (DE native) og lokation (Gießen, DE) er i scope."
+  },
   {
    "source": "dk-arkitektforeningen",
    "country": "DK",
