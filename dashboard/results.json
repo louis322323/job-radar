@@ -1,7 +1,37 @@
 {
- "generated": "2026-06-26 08:40",
+ "generated": "2026-06-27 08:09",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "wedodemocracy",
+   "country": "DK",
+   "title": "OECD Citizen Participation",
+   "org": "We Do Democracy",
+   "url": "https://www.oecd.org/gov/innovative-citizen-participation.html",
+   "snippet": "OECD Citizen Participation",
+   "deadline": null,
+   "flags": [],
+   "matched": [
+    "citizen participation"
+   ],
+   "score": 75,
+   "verdict": "Stærkt match på borgerinddragelse og facilitering, men rollen er hos OECD i Paris, hvilket kræver fransk eller omfattende EU-netværk, og teksten er meget kort, så der er usikkerhed om ansættelsesvilkår og sprogkrav"
+  },
+  {
+   "source": "eurobrussels-migration",
+   "country": "BE",
+   "title": "Internship",
+   "org": "eurobrussels-migration",
+   "url": "https://www.eurobrussels.com/job_display/292956/Internship_AFLA_Africa_Legal_Aid_Remote_Multiple_Countries",
+   "snippet": "Internship - AFLA - Africa Legal Aid, Remote <SCRIPT language='JavaScript1.1' SRC=\"https://ad.doubleclick.net/ddm/adj/N476601.2562112EUROJOBSITES.COM/B36108354.449109862;abr=!ie;sz=728x90;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;dc_sdk_apis=[APIFRAMEWORKS];dc_omid_p=[OMIDPARTNER];gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};dc_tdv=1?\">\r\n</SCRIPT> Job Search Search for Jobs 0 Saved Jobs Jobs Expiring Soon Search for Jobs My Profile Login Register CV Job Alerts Newsletter Saved Jobs ( 0 ) Jobs Expiring Soon Login Register CV Job Alerts Career Guides Conferences Education Career Career Guides Conferences Education Movers and Shakers Post a Job Recruiter Recruiters Guide Recruiters Recruiters Guide Internship Saved Save this Job Saved Save Internship AFLA - Africa Legal Aid Remote Contribute to the promotion of human rights & international justice with an internship at Africa Legal Aid (AFLA). Responsibilities: Conducting research and documenting human rights and international justice issues; Organising and supporting AFLA’s capacity-building programmes; Supporting AFLA’s advocacy initiatives; Monitoring proceedings and developments at the International Criminal Court; Supporting the publication process of AFLA’s flagship publications. This includes proofreading the AFLA Quarterly & Book Series as well as managing the digital distribution of the AFLA E-Reporter; Assisting in managing AFLA’s social media channels. Qualifications: Must have an advanced degree in law or related studies; Fluency in English is a must; Working knowledge of French is an asset; Excellent research and writing skills; Sense of humour; Must be able to work independently as well as in a team; Perfectly organised; Computer skills are essential. Interns work under the supervision of a seasoned human rights and international justice lawyer and associates. Apply Now Deadline 30 July Don't forget to mention EuroBrussels when applying. Share this Job More Job Searches Multiple Countries Communication/Public Relations Human Rights and Democracy Justice, Freedom and Security NGO and Political Remote AFLA - Africa Legal Aid Top Jobs European Public Affairs Junior Consultants - Brussels Funding Officer - Luxembourg Managing Director and Head of Brussels Office - Brussel... Policy Strategist/Economist - Luxembourg European Public Affairs Consultants - Brussels Chief Operating Officer (COO) - Brussels Education Master in European Business Law LL.M. My Profile (0/3 complete) 🔲 Get Job Alerts 🔲 Add your CV profile 🔲 Subscribe to the Newsletter Search for jobs in Consumers, Public Health and Food Safety (3) Economic and Monetary Affairs (12) Energy (4) Environment (6) External Relations and Development Aid (5) Human Rights and Democracy (6) Internal Market and Business Regulation (8) Justice, Freedom and Security (12) More... EuroBrussels Conferences 19 October 2026 - Polymers and Microplastics: How is the EU Regulating Them? 24 September 2026 - Guide Through t",
+   "deadline": null,
+   "flags": [],
+   "matched": [
+    "migration"
+   ],
+   "score": 0,
+   "verdict": "Internship er ubetalt eller ulønnet praktik, hvilket ikke er en ansat ph.d.-stilling eller lønnet rolle, og dermed uden for scope"
+  },
   {
    "source": "dk-arkitektforeningen",
    "country": "DK",
