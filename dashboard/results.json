@@ -1,7 +1,37 @@
 {
- "generated": "2026-07-07 08:49",
+ "generated": "2026-07-08 07:45",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "dk-arkitektforeningen",
+   "country": "DK",
+   "title": "ansøgningsfrist 15/08/2026 Byplanlægger, C.F. Møller Architects",
+   "org": "Arkitektforeningen jobbørs",
+   "url": "https://arkitektforeningen.dk/job/byplanlaegger-15/",
+   "snippet": "Byplanlægger Aktuelt Vi tilbyder Vi arbejder for ARKITEKTEN Jobbørs Vær med Organisation + Lokalafdelinger + Bornholm København Østjylland Sydjylland Vestjylland Nordjylland Østifterne Strategi Udvalg & nævn Æresbevisninger Vedtægter Om ARKITEKTEN Medlemskab + Hvem kan blive MAA? Kontingent Studerende Nyuddannede arkitekter Medlemsfordele Bliv MAA Arkitektens Butik English Kontakt Min profil Find et medlem Byplanlægger Brænder du for byplanlægning, og vil du være en del af et byplan-team, der arbejder med helhedsorienteret og løsningsfokuseret planlægning? Del artikel Klik for at kopiere https://arkitektforeningen.dk/job/byplanlaegger-15/ Ansøg Virksomhed: C.F. Møller Architects Arbejdssted: Aarhus Ansøgningsfrist: 15/08/2026 Brænder du for byplanlægning, og vil du være en del af et byplan-team, der arbejder med helhedsorienteret og løsningsfokuseret planlægning? Er du drevet af høj faglighed og motiveret af at skabe bæredygtige og velfungerende byområder? Har du samtidig solid erfaring med skitsering og projektledelse af byudviklingsopgaver, herunder kommune- og lokalplanlægning og miljøvurdering, så er du måske vores nye byplanlægger til vores tegnestue i Aarhus. Hvad kan vi tilbyde? Du bliver en del af C.F. Møllers byplan-team på vores tegnestue i Aarhus, hvor du i hverdagen får en bred samarbejdsflade på tværs af organisationen. Du kommer til at indgå i stærke tværfaglige teams med landskabsarkitekter, urban designers, arkitekter og bygningskonstruktører, hvor høje faglige standarder, arkitektoniske ambitioner og en uhøjtidelig samarbejdskultur går hånd i hånd. Som byplanlægger hos os bliver du en central profil i vores planopgaver og får en vigtig rolle i arbejdet med at skabe stærke og velfunderede plangrundlag for fremtidens byudviklingsprojekter. Arbejdet er i høj grad baseret på dialog, procesforståelse og koordinering, og du bliver en vigtig person i den løsningsorienterede dialog med bygherre, myndigheder, kolleger og øvrige fagfolk. Du skal kunne guide vores kunder trygt gennem planprocessen og sikre, at faglighed, kvalitet og fremdrift går op i en højere enhed. Dine opgaver kan blandt andet omfatte: Procesledelse, koordinering og organisering af planprocesser Udarbejdelse af lokalplanforslag og miljøvurdering Planundersøgelser, indledende analyser og screening af potentielle projektområder Tværfaglig dialog med arkitekter, landskabsarkitekter og ingeniører Myndigheds- og bygherredialog Du vil samtidig opleve et stærkt fokus på din faglige udvikling. Det sker gennem daglig sparring, feedback og faglige diskussioner, som er en naturlig del af vores kultur. Derudover får du adgang til C.F. Møller Grow, som er vores interne platform for kurser, videndeling og faglige netværk. Vi tilbyder stor frihed til at planlægge og udføre dit arbejde på den måde, du vurderer mest hensigtsmæssig. Din rolle Som byplanlægger hos C.F. Møller bliver du en central kontakt for vores kunder og er med til at sikre, at de oplever et trygt og professionelt forl",
+   "deadline": "2026-08-15",
+   "flags": [],
+   "matched": [
+    "byplanlæg"
+   ],
+   "score": 55,
+   "verdict": "Rollen som byplanlægger hos C.F. Møller i Aarhus har et core-deliverable gap i lokalplanlægning og miljøvurdering, hvilket giver et realisme-straf, og Aarhus er ikke en prioriteret udkantslokation."
+  },
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Program Lead/Project Manager",
+   "org": "Quest Consulting Sverige AB",
+   "url": "https://pnty-apply.ponty-system.se/quest?id=8230&pnty_src=platsbanken",
+   "snippet": "Assignment Description\nWe are looking for a Program Lead/Project Manager for an assignment requiring on-site presence. The role involves leading a complex leasing platform migration from planning through execution and transition into production, with responsibility for scope, timeline, budget, risks, dependencies, deliverables, governance, reporting, steering committee meetings, and decision tracking.\nMain Responsibilities\nYou will work closely with internal business stakeholders to gather, assess, validate and document business needs, and turn them into functional and non-functional requirements for technical implementation. You will also serve as the link between business users and external development teams, ensuring clear communication across technical and non-technical stakeholders.\nThe assignment includes facilitating workshops, coordinating solution design discussions with technical experts, supporting architectural decisions, managing risks and escalations, and coordinating UAT, defect resolution, production readiness, data migration planning, system integrations and cutover activities. The work should be carried out with clear requirements, controlled risks, strong collaboration and minimal disruption to the business.\nRequired Qualifications:\nExperience managing risks and dependencies.\nAcademic degree at bachelor level in Information Technology, Computer Science, Business Administration, Engineering, or another relevant discipline.\nTechnical understanding sufficient to grasp system integrations and API-based architecture.\nAt least seven years of experience from managing complex IT implementation or migration assignments.\nAbility to read and understand technical documentation and solution designs.\nDemonstrated experience of leading platform migrations or digital transformation initiatives.\nExperience documenting requirements and analyzing business processes.\nPrior experience in comparable regulated environments, including banking, financial services, leasing, or other highly regulated industries, is highly desirable.\nExperience collaborating with external software suppliers and development teams working across locations.\nSolid knowledge of software development lifecycle models, such as Agile, Scrum, Waterfall, or hybrid ways of working.\nExperience using Jira, Confluence, Azure DevOps, or comparable project management tools.\nDemonstrated ability to handle multiple stakeholders with different priorities.\nUnderstanding of data migration principles and",
+   "deadline": "2026-07-10T23:59:59",
+   "flags": [],
+   "matched": [
+    "migration"
+   ],
+   "score": 0,
+   "verdict": "Rollen er IT-projektledelse med leasingplatform-migration, hvilket ligger langt fra Louis kernekompetencer inden for borgerinddragelse, lokalsamfundsudvikling og migration"
+  },
   {
    "source": "eurobrussels-migration",
    "country": "BE",
