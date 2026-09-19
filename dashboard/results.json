@@ -1,7 +1,39 @@
 {
- "generated": "2026-09-18 09:57",
+ "generated": "2026-09-19 09:39",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Senior Business Analyst",
+   "org": "Rasulson Consulting AB",
+   "url": "https://app.teamtailor.com/companies/zbu-mmYIt10@eu/jobs/8404643/stages",
+   "snippet": "Assignment: Senior Business Analyst\nAbout the assignment\n We are looking for an experienced Senior Business Analyst to take a leading role within an IT Delivery & Migration workstream as part of a larger HR transformation program at our client.\nThe assignment focuses on driving the workstream from planning into execution, ensuring successful implementation, migration, testing, integration and go-live readiness. You will lead and coordinate activities across multiple parallel initiatives and ensure delivery stays aligned with project plans, governance and established ways of working.\nResponsibilities\n You will work closely with business stakeholders, IT teams, global functions, vendors and other project streams. You are responsible for creating structure, transparency and momentum while managing integrations, testing, data migration and system implementations. The role also includes coordinating cutover, go-live and transition to support, along with managing risks, issues, dependencies and escalations.\nYou will ensure traceability between requirements, testing and delivery, and maintain relevant project documentation and reporting.\nThe assignment also includes broader Business Analyst responsibilities, such as investigations and assessments, requirements analysis, business process analysis, and strategic and operational improvement initiatives.\nRequired qualifications\nStrong experience in IT delivery and program coordination\nSolid experience in business analysis and requirements management\nExperience coordinating integrations and managing integration dependencies\nStrong test management experience, including SIT, UAT and integration testing\nExperience with data migration and data quality\nExperience planning and coordinating cutover and go-live activities\nStrong risk and stakeholder management skills\nExperience coordinating vendors and suppliers\nBachelor's degree in Information Technology, Computer Science, Engineering, Business Information Systems or a related field\n5+ years of experience in roles such as Senior Business Analyst, IT Delivery Lead, Migration Lead or System Analyst\nExperience leading complex IT implementations or transformation programs\nExperience managing cross-functional teams and stakeholders\nFluency in Swedish and English, written and spoken\n\nPreferred experience\nExperience with SAP SuccessFactors, Workday, Aditro or similar HR platforms\nExperience from HR or ERP transformation programs\nExperience with payroll systems and payroll parallel ",
+   "deadline": "2026-09-24T23:59:59",
+   "flags": [
+    "senior_signals"
+   ],
+   "matched": [
+    "migration"
+   ],
+   "score": 0,
+   "verdict": "Svensk som primært arbejdssprog og ren IT-business-analyst-rolle uden relevans for Louis' profil — hårdt sprogfilter og forkert fagområde."
+  },
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Business Expert  Maketing Planning",
+   "org": "H & M Hennes & Mauritz GBC AB",
+   "url": "https://jobs.smartrecruiters.com/HMGroup/744000150048448-business-expert-maketing-planning",
+   "snippet": "Job Description\n​WHAT YOU’LL DO​\nAre you a business expert with a passion for marketing planning? Do you enjoy building new tech that overcomes organisational challenges and adds customer value? Then this could be the role for you!​\nAct as the voice of the business in a cross-competence agile team, turning planning needs into a new tech tool.​ \nDrive stakeholder engagement across a broad landscape – from Global Marketing and Commercial teams to Sales Markets in 26 countries.​ \nUse your marketing planning expertise to validate ideas and sanity-check what the team is building.​ \nHelp shape and design a product that our colleagues love to use! \nLean into exploring how AI can strengthen planning and decision-making as the product evolves.​ \n\nWHO YOU’LL WORK WITH​ \nThis is a start-up-style project within H&M: small in team size, big in ambition. You’ll work day-to-day with Product, Tech, and Business colleagues, acting as the business anchor as the team builds and iterates together.​ \nYou'll join the Marketing Insights & Steering area within the Marketing Domain, where we enable data-driven decision-making across H&M's global marketing organisation. Our team plays a central role in understanding the impact of marketing, ensuring that investments across channels, markets and customer touchpoints are measurable, optimised and aligned with business goals.\n\n\n\n\nQualifications\n\n\nWHO YOU ARE​ \nWe are looking for people with…​ \nProven experience as a Business Expert or subject-matter expert in marketing or commercial planning.​ \nComfortable working with complex and ambiguous processes, and breaking down solutions into deliverable stages.​ \nA track record of aligning stakeholders at both global and local levels.​ \nFashion retail experience is a bonus, though not a requirement.​ \n\nAnd people who are…​ \nPassionate about building technology that solves real business problems.​ \nSkilled at communicating complex ideas simply, and at influencing without formal authority.​ \nDriven by outcomes – focused on the impact your work has for colleagues and customers.​ \nCollaborative and pragmatic, energised by ambiguity rather than daunted by it.​\n\n\n\n\n\nAdditional Information\n\n\nWHO WE ARE \nH&M Group is a global company of strong fashion brands and ventures. Our goal is to prove that there is no compromise between exceptional design, affordable prices, and sustainable solutions. We want to liberate fashion for the many, and our customers are at the heart of every decision we make. \nWe a",
+   "deadline": "2026-10-18T23:59:59",
+   "flags": [],
+   "matched": [
+    "stakeholder engagement"
+   ],
+   "score": 15,
+   "verdict": "Svensk-primær stilling hos H&M i Stockholm inden for marketing planning og tech-udvikling — forkert arbejdssprog og slet ikke Louis' felt (borgerinddragelse/lokalsamfund/byudvikling)."
+  },
   {
    "source": "eurobrussels-migration",
    "country": "BE",
@@ -397,22 +429,6 @@
    ],
    "score": 62,
    "verdict": "Klassisk lokalplan-CORE rolle med borgerdialog, men kerneopgaven ligger i Louis' erfaringshul og stillingen kræver selvstændig planlægningserfaring, hvilket giver et realisme-gap."
-  },
-  {
-   "source": "byplanlab",
-   "country": "DK",
-   "title": "Hørsholm Kommune BYPLANLÆGGER TIL HØRSHOLM KOMMUNE Vil du være med til at skabe rammerne for Hørsholm Kommunes fremtidige udvikling? Har du lyst til at arbejde tværfagligt og dialogorienteret med byudviklingsprojekter og sikre høj kvalitet i lokalplanlægningen? Så er det måske dig, vi søger. Ansøgningsfrist 07.09.26",
-   "org": "Dansk Byplanlab",
-   "url": "https://byplanlab.dk/da/job/byplanlaegger-til-hoersholm-kommune",
-   "snippet": "BYPLANLÆGGER TIL HØRSHOLM KOMMUNE | Dansk Byplanlaboratorium Gå til hovedindhold Dansk Byplanlaboratorium Bliv tilskudsgiver Menu Kurser og konferencer Viden Artikler Byplan Nyt Udgivelser Netværk Webinarer Podcasts Nyhedsbrev Projekter Om os Kontakt Organisation Repræsentantskab Bestyrelsen Byplanprisen Byplanmødet Tilskudsgiver Presse Medarbejdere Jobbørs Søg Danish English Stillingsopslag BYPLANLÆGGER TIL HØRSHOLM KOMMUNE Lokation Hørsholm Kommune Kontaktperson Centerchef Jeppe Fisker Jørgensen 21 65 75 18 Koordinator i Plan Ane Kristensen 23 29 51 55 Ansøgningsfrist 07. september 2026 Jobområde Byplanlægning Arbejdstid 37 timer Website Hørsholm Kommune Gå til det fulde stillingsopslag Vil du være med til at skabe rammerne for Hørsholm Kommunes fremtidige udvikling? Har du lyst til at arbejde tværfagligt og dialogorienteret med byudviklingsprojekter og sikre høj kvalitet i lokalplanlægningen? Så er det måske dig, vi søger. Som byplanlægger i Hørsholm bliver du en del af et fagligt stærkt planteam, hvor du har mulighed for at drive lokalplaner og byudviklingsprojekter fra de første idéer til den endelige plan. Du kommer til at arbejde tæt sammen med borgere, udviklere og kollegaer på tværs af kommunen og får en central rolle i udviklingen af Hørsholm. Gå til det fulde stillingsopslag Stillingsopslag Er du jobsøgende? Se vores stillingsopslag Læs mere Dansk Byplanlaboratorium Dansk Byplanlaboratorium Rådhusstræde 6, 1. sal CVR 56736115 +45 3313 7281 db@byplanlab.dk Nyttige genveje Organisationen Publikationer Arrangementer Medarbejdere Behandling af data Cookiepolitik Nyhedsbrev Vi sætter byplanlægning på dagsordenen. Modtag nyhedsbrev om projekter, udgivelser og kurser. Gå til tilmelding",
-   "deadline": "2026-09-07",
-   "flags": [],
-   "matched": [
-    "byudvikling",
-    "byplanlæg"
-   ],
-   "score": 62,
-   "verdict": "Klassisk lokalplan-rolle i Hørsholm, hvor kerneopgaven er lokalplanlægning, som er Louis' erfaringshul, og derfor giver realisme-gap på trods af dialogorienteringen."
   }
  ]
 }
