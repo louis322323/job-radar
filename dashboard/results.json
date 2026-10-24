@@ -1,7 +1,24 @@
 {
- "generated": "2026-10-23 10:20",
+ "generated": "2026-10-24 09:41",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Change Manager with Finance Experience - 20324",
+   "org": "Veritaz AB",
+   "url": "https://veritaz.se/jobs/change-manager-with-finance-experience-20324-1134",
+   "snippet": "Veritaz is a leading IT staffing solutions provider in Sweden, committed to advancing individual careers and aiding employers in ensuring the perfect talent fit. With a proven track record of successful partnerships with top companies, we have rapidly grown our presence in the USA, Europe, and Sweden as a dependable and trusted resource within the IT industry.\nJob Overview\nRole Summary\nWe are seeking a Senior Change Manager for a consulting assignment within the financial services sector. The client is executing a major transformation programme in asset finance, introducing a new core system and front-end solution to digitalise and automate workflows that currently include manual activities.\nWorking closely with the Programme Manager, you will support business employees and managers through the transition to new systems, processes and ways of working. You will build understanding, engagement and organisational readiness, ensuring that the business receives appropriate support before, during and after implementation.\nKey Responsibilities\nPlan, lead and coordinate change-management activities for the implementation of a new core system and front-end solution.\nTranslate overarching programme objectives into practical, actionable change activities for affected business functions.\nAssess change impacts across different employee groups, roles and business areas.\nDevelop and coordinate communication, stakeholder engagement, anchoring and training initiatives in collaboration with the business and system supplier.\nSupport employees and managers in moving from manual work practices to digitalised and automated processes.\nIdentify questions, concerns, resistance and adoption barriers, and convert these insights into concrete mitigating actions.\nWork closely with business stakeholders, programme leadership and external suppliers throughout the transformation.\nProvide practical and strategic support to promote adoption of new processes, systems and ways of working.\n\nTechnical Stack & Requirements\nChange-management experience within large-scale system implementations and business transformation initiatives.\nExperience of core-system implementation or comparable business-critical systems in financial services.\nKnowledge of structured change-management methodologies, preferably Prosci and ADKAR, or equivalent approaches.\nExperience with stakeholder management, change-impact assessment, communication planning and training planning.\nAbility to collaborate effectively acros",
+   "deadline": "2026-11-22T23:59:59",
+   "flags": [
+    "senior_signals"
+   ],
+   "matched": [
+    "stakeholder engagement"
+   ],
+   "score": 22,
+   "verdict": "Svensk IT-konsulentbureau søger senior change manager med finansiel kerne-system-erfaring og Prosci/ADKAR — forkert arbejdssprog (svensk) og uden for Louis' profil."
+  },
   {
    "source": "eurobrussels-migration",
    "country": "BE",
