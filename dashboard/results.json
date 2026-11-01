@@ -1,7 +1,24 @@
 {
- "generated": "2026-10-31 11:01",
+ "generated": "2026-11-01 11:56",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Senior Project / Program Manager  Financial Crime Prevention (FCP) - 20225",
+   "org": "Veritaz AB",
+   "url": "https://veritaz.se/jobs/senior-project-program-manager-financial-crime-prevention-fcp-20225-1143",
+   "snippet": "Veritaz is a leading IT staffing solutions provider in Sweden, committed to advancing individual careers and aiding employers in ensuring the perfect talent fit. With a proven track record of successful partnerships with top companies, we have rapidly grown our presence in the USA, Europe, and Sweden as a dependable and trusted resource within the IT industry.\nJob Overview\nAssignment Description\nThe client is looking for an experienced Senior Project/Program Manager to coordinate multiple EPICs delivered by different teams across various areas of the bank.\nYou will be responsible for developing clear delivery plans, coordinating deliverables, and identifying dependencies and risks across the different EPICs. From late January/early February 2027, you will also take over the program management responsibility for an ongoing Financial Crime Prevention (FCP) program as the current Program Manager retires.\nThe program includes implementing new customer screening and transaction monitoring systems, upgrading existing systems, migrating systems to a new container platform, and regulatory reporting.\nWhat You Will Work On\nCoordinate multiple EPICs across different teams and business areas.\nDevelop clear plans and coordinate deliveries across EPIC owners.\nIdentify, track, and manage dependencies, risks, and delivery challenges.\nTake over program management responsibilities for the ongoing FCP program.\nCoordinate implementation of customer screening and transaction monitoring systems.\nManage system upgrades, container platform migrations, and regulatory reporting initiatives.\nAlign stakeholders and ensure progress across parallel workstreams.\n\nWhat You Bring\nExtensive experience in project and/or program management.\nExperience coordinating multiple projects or workstreams.\nStrong skills in dependency management, risk identification, and delivery planning.\nFluent Swedish and English, both written and spoken.\nStrong stakeholder management and communication skills.\n\nMeritorious\nPrevious experience with regulatory projects.\nExperience within Financial Crime Prevention (FCP).\nExperience in banking and financial services.\nExperience managing complex IT programs involving multiple teams and systems.",
+   "deadline": "2026-11-21T23:59:59",
+   "flags": [
+    "senior_signals"
+   ],
+   "matched": [
+    "migration"
+   ],
+   "score": 12,
+   "verdict": "Svensk-primært arbejdssprog og rent IT/finans-programlederjob uden relevans for Louises profil — hård sprogfilter og forkert rolletype."
+  },
   {
    "source": "imiscoe-jobs",
    "country": "EU",
