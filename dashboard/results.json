@@ -1,7 +1,39 @@
 {
- "generated": "2026-11-12 13:55",
+ "generated": "2026-11-13 13:19",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "Senior Spatial Data Engineer",
+   "org": "Nordic Investin Group Aktiebolag",
+   "url": "https://jobs.nordicinvestin.se/jobs/8723770-senior-spatial-data-engineer/applications/new?promotion=2293997-arbetsformedlingen",
+   "snippet": "A partner company is strengthening its team, and Nordic Investin is recruiting a Senior Spatial Data Engineer. You want technical choices, delivery and production behaviour to reinforce each other, even when the constraints are difficult.\nThe partner is strengthening its capability in scalable spatial data pipelines for maps networks and location intelligence. You will connect Python, PostGIS and geospatial ETL while ensuring that cloud storage and data quality receive appropriate discipline. The aim is practical progress that colleagues can use, leaders can evaluate and the organisation can sustain.\nThe environment rewards early questions, visible trade-offs and engineering discipline. Security and operability belong in the design.\nHow you will work\nYou will work with product, architecture, security, operations and domain colleagues. The partner values short feedback loops, evidence from real systems and direct communication.\nThis role calls for independent judgement and the ability to raise the quality around you. You are expected to make trade-offs visible, recognise when a decision needs wider expertise and move work forward without creating unnecessary process.\nWhat you will do\nOwn the practical direction for scalable spatial data pipelines for maps networks and location intelligence.\nTranslate goals and constraints into a clear approach for Python and PostGIS.\nEstablish useful standards, routines or decision artefacts around geospatial ETL.\nCoordinate stakeholders and dependencies affecting cloud storage.\nUse evidence and measurable outcomes to improve data quality.\nStrengthen knowledge sharing and sustainable ownership through spatial APIs.\nWhat you will bring\nRelevant experience delivering scalable spatial data pipelines for maps networks and location intelligence in a demanding environment.\nStrong working knowledge of Python and PostGIS.\nPractical experience applying geospatial ETL and cloud storage.\nAbility to assess priorities, risks and trade-offs involving data quality.\nEvidence of clear stakeholder communication and dependable end-to-end ownership.\nProfessional English and the judgement to work with sensitive or business-critical information.\nExperience that would add value\nExperience from transport energy telecom and urban planning.\nExposure to spatial APIs in a cross-functional or multi-team environment.\nSwedish language skills or experience working across Nordic organisations.\nA background that can succeed here\nYour background may be produ",
+   "deadline": "2027-05-11T23:59:59",
+   "flags": [
+    "senior_signals"
+   ],
+   "matched": [
+    "urban planning"
+   ],
+   "score": 18,
+   "verdict": "Senior teknisk GIS/dataingeniørrolle på svensk arbejdsmarked med krav om omfattende erfaring inden for spatial data pipelines — matcher hverken Louis' profil eller sprogkrav."
+  },
+  {
+   "source": "platsbanken-stockholm",
+   "country": "SE",
+   "title": "People Data and Workforce Planning Analyst",
+   "org": "Nordic Investin Group Aktiebolag",
+   "url": "https://jobs.nordicinvestin.se/jobs/8723862-people-data-and-workforce-planning-analyst/applications/new?promotion=2294047-arbetsformedlingen",
+   "snippet": "Nordic Investin has been asked to find a People Data and Workforce Planning Analyst for one of our partner companies. You care about people work that is fair, commercially aware and useful, and you build trust without avoiding difficult decisions.\nThe partner is strengthening its capability in workforce insight that connects capacity skills and financial scenarios. You will connect people analytics, workforce data and scenario modelling while ensuring that skills taxonomy and dashboards receive appropriate discipline. The aim is practical progress that colleagues can use, leaders can evaluate and the organisation can sustain.\nThe people function combines employee experience, reliable judgement, usable processes and respect for sensitive information.\nHow you will work\nYou will work with managers, employees and specialist colleagues. The partner values early advice, careful documentation and recommendations people can act on.\nThis role calls for subject-matter depth and practical ownership. You are expected to make trade-offs visible, recognise when a decision needs wider expertise and move work forward without creating unnecessary process.\nWhat you will do\nOwn the practical direction for workforce insight that connects capacity skills and financial scenarios.\nTranslate goals and constraints into a clear approach for people analytics and workforce data.\nEstablish useful standards, routines or decision artefacts around scenario modelling.\nCoordinate stakeholders and dependencies affecting skills taxonomy.\nUse evidence and measurable outcomes to improve dashboards.\nStrengthen knowledge sharing and sustainable ownership through facilitation.\nWhat you will bring\nRelevant experience delivering workforce insight that connects capacity skills and financial scenarios in a demanding environment.\nStrong working knowledge of people analytics and workforce data.\nPractical experience applying scenario modelling and skills taxonomy.\nAbility to assess priorities, risks and trade-offs involving dashboards.\nEvidence of clear stakeholder communication and dependable end-to-end ownership.\nProfessional English and the judgement to work with sensitive or business-critical information.\nExperience that would add value\nExperience from large organisations and strategic workforce functions.\nExposure to facilitation in a cross-functional or multi-team environment.\nSwedish language skills or experience working across Nordic organisations.\nA background that can succeed here\nYour backgro",
+   "deadline": "2027-05-11T23:59:59",
+   "flags": [],
+   "matched": [
+    "facilitation"
+   ],
+   "score": 22,
+   "verdict": "Svensk-primær HR-analyse/people analytics-rolle i Stockholm uden match til Louis' borgerinddragelses-/lokalsamfundsprofil og uden for geografisk scope."
+  },
   {
    "source": "eurobrussels-migration",
    "country": "BE",
@@ -583,36 +615,6 @@
    ],
    "score": 0,
    "verdict": "Svensk-primær finansanalytikerstilling i Stockholm uden relevans for Louis' profil og uden for scope."
-  },
-  {
-   "source": "eurobrussels-migration",
-   "country": "BE",
-   "title": "Policy Officer - PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer",
-   "org": "eurobrussels-migration",
-   "url": "https://www.eurobrussels.com/job_display/296984/Policy_Officer_PNT_Positioning_Navigation_and_Timing_Space_Threat_Response_Duty_Officer_EEAS_European_External_Action_Service_Brussels_Belgium",
-   "snippet": "Policy Officer - PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer - EEAS - European External Action Service, Brussels Job Search Search for Jobs 0 Saved Jobs Jobs Expiring Soon Search for Jobs My Profile Login Register CV Job Alerts Newsletter Saved Jobs ( 0 ) Jobs Expiring Soon Login Register CV Job Alerts Career Guides Conferences Education Career Career Guides Conferences Education Movers and Shakers Post a Job Recruiter Recruiters Guide Recruiters Recruiters Guide Policy Officer - PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer Saved Save this Job Saved Save Policy Officer - PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer EEAS - European External Action Service Brussels, Belgium WE PROPOSE The position of Policy Officer – PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer contract agent FGIV as per Article 3b of the Conditions of Employment of Other Servants of the European Union (hereafter, the “CEOS”). The Policy Officer – PNT (Positioning, Navigation and Timing)/Space Threat Response Duty Officer contributes to the development and implementation of EU policies related to secure positioning, navigation and timing services, including Galileo and the Public Regulated Service (PRS) in the framework of the EU Space Programme and the EU Space Strategy for Security and Defence. The postholder monitors political, security and technological developments affecting space-based PNT capabilities and supports coordination with EU institutions, Member States, agencies and international partners. In addition to policy responsibilities, the postholder will serve as a Space Threat Response Duty Officer within the framework of the EU Space Threat Response Architecture. The Duty Officer will participate in a 24/7 on-call duty system and act as the first point of contact for the notification, monitoring and initial assessment of space-related threats, incidents and crises affecting the European Union, its Member States or EU space assets and services. WE LOOK FOR We look for an enthusiastic colleague with sound expertise in both PNT and in security and defence. He/she will formulate the EEAS input on the use of these services for security and defence in the EU and, to that end, will work constructively with Member States and the relevant EU entities. The successful candidate should demonstrate a strong interest in EU space policy and in the security and defence dimensions of the EU Space Programme. He/she will contribute to defining and monitoring policies in the area of space and security/defence as well as space and international relations. As Policy Officer, the successful candidate will monitor political, security and technological developments affecting space-based PNT capabilities and support coordination with EU institutions, Member States, agencies and international partners. As STRA DO (Space Threat Response Architecture Duty Officer), the colle",
-   "deadline": null,
-   "flags": [],
-   "matched": [
-    "migration"
-   ],
-   "score": 22,
-   "verdict": "Rumfarts- og sikkerhedspolitisk EEAS-stilling med PNT/Galileo-ekspertise og 24/7-vagtordning ligger langt fra Louis' profil inden for borgerinddragelse, lokalsamfund og migration."
-  },
-  {
-   "source": "eurobrussels-migration",
-   "country": "BE",
-   "title": "Legal Officer",
-   "org": "eurobrussels-migration",
-   "url": "https://www.eurobrussels.com/job_display/296989/Legal_Officer_CEPOL_European_Union_Agency_for_Law_Enforcement_Training_Budapest_Hungary",
-   "snippet": "Legal Officer - CEPOL - European Union Agency for Law Enforcement Training, Budapest Job Search Search for Jobs 0 Saved Jobs Jobs Expiring Soon Search for Jobs My Profile Login Register CV Job Alerts Newsletter Saved Jobs ( 0 ) Jobs Expiring Soon Login Register CV Job Alerts Career Guides Conferences Education Career Career Guides Conferences Education Movers and Shakers Post a Job Recruiter Recruiters Guide Recruiters Recruiters Guide Legal Officer Saved Save this Job Saved Save Legal Officer CEPOL - European Union Agency for Law Enforcement Training Budapest, Hungary € 40,000 - € 49,999 per year Job Summary Under the supervision and the overall responsibility of the HoU Strategic and Planning Directorate Unit the Senior legal and human rights officer will provide legal assessments needed for the effective implementation of the Themis programme by the consortium. The role includes ensuring comprehensive due diligence on human rights compliance in line with the EU’s legal and policy framework, identifying potential legal and human rights risks, and proposing mitigation measures. The Officer will contribute to the mainstreaming of human rights considerations across all project activities, as well as monitor adherence to applicable international and regional standards. Additionally, the position entails advising consortium partners on legal obligations, supporting capacity-building efforts, and ensuring that all actions are aligned with principles of accountability, rule of law, and respect for fundamental rights. Key accountabilities Conduct thorough legal and human rights due diligence to ensure compliance with the EU legal and policy framework across all project activities; Identify potential legal and human rights risks and develop practical mitigation strategies to address them; Effectively mainstream human rights considerations within the consortium’s work; Monitor and assess compliance with applicable international, regional, and EU human rights standards, ensuring consistent application across all actions; Provide legal advice and guidance to consortium partners on obligations related to regulatory compliance; Support and deliver capacity-building initiatives, including training sessions for staff and stakeholders on legal and human rights topics; Ensure alignment of all activities with core principles of accountability, rule of law, and respect for fundamental rights; Prepare and regularly update relevant risk assessments and privacy statements; Offer independent legal support to ICT and other services on contractual matters, including cloud services (e.g. SaaS), and the use of relevant compliance tools such as questionnaires; Manage requests for access to documents and support the Legal Officer/Data Protection Officer (DPO) in preparing and delivering training; Draft and prepare Management Board (MB) and Executive Director (ED) decisions, as well as related legal and administrative documents. Eligibility criteria In addition, in order to ",
-   "deadline": null,
-   "flags": [],
-   "matched": [
-    "migration"
-   ],
-   "score": 22,
-   "verdict": "Juridisk EU-stilling i Budapest med krav om legal/human rights due diligence og compliance — ligger langt fra Louis' kernekompetencer inden for borgerinddragelse og lokalsamfundsudvikling, og Ungarn er uden for scope."
   }
  ]
 }
