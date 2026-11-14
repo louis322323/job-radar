@@ -1,7 +1,22 @@
 {
- "generated": "2026-11-13 13:19",
+ "generated": "2026-11-14 12:23",
  "min_score": 70,
  "jobs": [
+  {
+   "source": "eurobrussels-migration",
+   "country": "BE",
+   "title": "Compliance Officer",
+   "org": "eurobrussels-migration",
+   "url": "https://www.eurobrussels.com/job_display/299118/Compliance_Officer_CEB_Council_of_Europe_Development_Bank_Paris_France",
+   "snippet": "Compliance Officer - CEB - Council of Europe Development Bank, Paris Job Search Search for Jobs 0 Saved Jobs Jobs Expiring Soon Search for Jobs My Profile Login Register CV Job Alerts Newsletter Saved Jobs ( 0 ) Jobs Expiring Soon Login Register CV Job Alerts Career Guides Conferences Education Career Career Guides Conferences Education Movers and Shakers Movers and Shakers Post a Job Recruiter Recruiters Guide Recruiters Recruiters Guide Compliance Officer Saved Save this Job Saved Save Compliance Officer CEB - Council of Europe Development Bank Paris, France € 7,652.42 - € 9,442.63 per month Grade: A2/A3 Salary: €7,652.42 – €9,442.63 per month, depending on experience, tax-exempt in France, plus eligible allowances Contract: initial four-year appointment, including a one-year probationary period, renewable one or more times up to six years, with the possibility of conversion to an indefinite-term contract Closing date: 6 December 2026, midnight Paris time Apply your compliance expertise to safeguard financial integrity and support social development across Europe. The Council of Europe Development Bank (CEB) is a multilateral development bank with a social mandate from its 43 member countries. We finance investment and provide technical assistance in education, healthcare and affordable housing, focusing on vulnerable populations and social cohesion. Within the Office of the Chief Compliance Officer (OCCO), the Compliance Unit identifies, assesses and mitigates financial and non-financial risks, helping protect the Bank's operations, reputation and institutional integrity. The role As Compliance Officer, you will contribute to safeguarding the CEB against compliance, conduct and reputational risks through effective integrity due diligence, risk assessment and compliance controls across the project cycle. You will conduct and coordinate Integrity Due Diligence (IDD), Compliance Risk Assessments (CRA) and Know Your Customer (KYC) processes, assessing risks relating to money laundering, terrorist financing, fraud, corruption and misconduct. You will analyse integrity alerts and screening results, identify potential concerns and recommend appropriate mitigation measures. Your work will also involve assessing complaints relating to projects or staff misconduct, supporting investigations and contributing to Fraud and Legal Assessments. Working with colleagues across the Bank, you will prepare compliance analyses and recommendations to support decision-making, while helping strengthen policies, procedures, monitoring tools and internal controls. You will contribute to compliance awareness and training, collaborate with internal stakeholders and external service providers, and support improvements to the Bank's compliance framework. What you'll bring You should have an advanced university degree in law, economics, finance, political science or a related field, together with at least five years of relevant professional experience in compliance, due dili",
+   "deadline": "2026-12-06",
+   "flags": [],
+   "matched": [
+    "migration"
+   ],
+   "score": 22,
+   "verdict": "Compliance Officer i Paris kræver mindst fem års compliance-erfaring og er en finansiel compliance-rolle langt fra Louis' profil inden for borgerinddragelse og lokalsamfundsudvikling."
+  },
   {
    "source": "platsbanken-stockholm",
    "country": "SE",
@@ -600,21 +615,6 @@
    ],
    "score": 30,
    "verdict": "Roster-konsulentrolle for Latinamerika/Karibien kræver regional erfaring og spansk/portugisisk, hvilket ligger uden for Louis' dansk/nordiske profil og geografiske scope."
-  },
-  {
-   "source": "platsbanken-stockholm",
-   "country": "SE",
-   "title": "Sr Finance Analyst",
-   "org": "CBRE GWS Sweden AB",
-   "url": "https://www.aplitrak.com/?adid=U2FyYS5UYW1hZG9uTmVqYWQuODQ5OTIuMTM3NjVAY2JyZWFwYWMuYXBsaXRyYWsuY29t",
-   "snippet": "About the Role: As a CBRE Financial Planning Sr. Analyst, you will be responsible for conducting moderate to complex financial analysis, financial reporting, and ad hoc finance projects.\n \n This job is part of the Financial Planning and Analysis job function. They are responsible for the short and long-term financial planning and analysis of business operations.\n \n What You'll Do:\nOversee the monthly and quarterly review of subsegment results including P&L, capital, KPIs, CAPEX and spending based on performance targets and objectives, providing commentaries.\nDevelop cost improvement and savings opportunities and provide documentation, supporting commercial assessment.\nManage the annual budget process from the facilitation of data collection to eventual review and evaulation of P&Ls.\nOversee monthly and quarterly forecasting and strategic planning processes.\nPresent routine and adhoc financial reports, packages and pro forma analyses to management.\nApply general knowledge of standard principles and techniques/procedures to accomplish assigned tasks and solve routine problems.\nHave a broad knowledge of own job discipline and some knowledge of several job disciplines within the function.\nLead by example and model behaviors that are consistent with CBRE RISE values. May convince to reach an agreement.\nImpact the quality of own work and the work of others on the team.\nWork primarily within standardized procedures and practices to achieve objectives and meet deadlines.\nExplain complex information to others in straightforward situations.\n\nWhat You'll Need:\nBachelor's Degree preferred with 2-5 years of relevant experience. In lieu of a degree, a combination of experience and education will be considered.\nUnderstanding of existing procedures and standards to solve slightly complex problems.\nAbility to analyze possible solutions using technical experience to apply appropriate judgment and precedents.\nIn-depth knowledge of Microsoft Office products. Examples include Word, Excel, Outlook, etc.\nStrong organizational skills with an inquisitive mindset.\nAdvanced math skills. Ability to calculate complicated figures such as percentages, fractions, and other financial-related calculations.",
-   "deadline": "2026-10-27T23:59:59",
-   "flags": [],
-   "matched": [
-    "facilitation"
-   ],
-   "score": 0,
-   "verdict": "Svensk-primær finansanalytikerstilling i Stockholm uden relevans for Louis' profil og uden for scope."
   }
  ]
 }
